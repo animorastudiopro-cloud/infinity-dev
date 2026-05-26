@@ -1,0 +1,483 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #020516;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 80px;
+    align-items: center;
+    background-color: rgb(1, 4, 34);
+}
+
+.logo img {
+    height: 50px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: aqua;
+    transition: width 0.4s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: aqua;
+}
+
+.btn-nav {
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 196, 196);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #0179cf;
+}
+
+.tarifs-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+
+.tarifs-hero {
+    text-align: center;
+    padding: 40px;
+    background-color: rgb(1, 4, 34);
+}
+
+.tarifs-hero span {
+    color: rgb(0, 196, 196);
+}
+
+.tarifs-hero p {
+    color: rgb(209, 209, 209);
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.tarifs-hero h2 {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+.tarifs-cards {
+    color: rgb(105, 105, 255);
+    width: 220px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid rgb(0, 153, 153);
+}
+
+.tarifs-cards h4{
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(0, 153, 153);
+}
+
+.tarifs-head p{
+    color: rgb(0, 247, 255);
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+.tarifs-head h3{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.tarifs-list {
+    color: rgb(209, 209, 209);
+    font-size: 13px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.tarifs-list i {
+    color: rgb(0, 196, 196);
+    padding-right: 8px;
+    font-size: 10px;
+}
+
+.pack-diff h2 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.tarifs-cards h5 {
+    color: rgb(0, 10, 53);
+    background-color: rgb(2, 160, 160);
+    padding: 3px 5px;
+    text-align: center;
+    margin-top: -20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.btn-tarifs {
+    padding: 3px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 196, 196);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/*footer*/
+.foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background-color: #000C19;
+    margin-top: 50px;
+
+}
+
+.social img {
+    height: 70px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.social p {
+    color: rgb(146, 146, 146);
+}
+
+.social-icon {
+    display: flex;
+    gap: 18px;
+    padding-top: 12px;
+    color: rgb(189, 189, 189);
+}
+
+.social-icon div {
+    background-color: rgba(82, 82, 82, 0.507);
+    padding: 4px 7px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.social-icon div:hover {
+    background-color: aqua;
+    transform: scale(1.08);
+}
+
+.social-icon div i {
+    transition: 0.3s;
+}
+
+.social-icon div i:hover {
+    color: #001829;
+}
+
+.menu-foot {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-foot h3 {
+    color: rgb(223, 223, 223);
+}
+
+.menu-foot a {
+    padding: 4px;
+    color: rgb(148, 148, 148);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-foot a:hover {
+    color: aqua;
+}
+
+.services-foot {
+    margin-top: 0;
+}
+
+.services-foot h3 {
+    color: rgb(212, 212, 212);
+}
+
+.services-foot p {
+    padding: 4px;
+    color: rgb(139, 139, 139);
+}
+
+.form-devis {
+    background-color: rgb(9, 7, 29);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 15px rgb(72, 249, 255);
+}
+
+.form-devis h3 {
+    padding-bottom: 10px;
+    color: rgb(216, 216, 216);
+}
+
+.name {
+    padding-bottom: 5px;
+}
+
+.name input {
+    padding: 4px;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 12px;
+    outline: none;
+    background-color: #000535;
+    color: rgb(121, 121, 121);
+}
+
+.email {
+    padding-bottom: 5px;
+}
+
+.email input {
+    padding: 4px;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 12px;
+    outline: none;
+    background-color: #000535;
+    color: rgb(121, 121, 121);
+}
+
+.description {
+    padding-bottom: 5px;
+}
+
+.description textarea {
+    padding: 10px 4px;
+    color: rgb(151, 151, 151);
+    outline: none;
+    background-color: #000535;
+}
+
+.form-btn {
+    padding: 4px 12px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 202, 202);
+    border: none;
+    border-radius: 12px;
+    margin-left: 45px;
+}
+
+.licence {
+    background-color: #000C19;
+    border-top: 1px solid rgba(158, 158, 158, 0.712);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 60px;
+}
+
+.licence p {
+    color: #7c7c7c;
+}
+
+.licence-links a {
+    color: #7c7c7c;
+    padding: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.licence-links a:hover {
+    color: aqua;
+}
+
+/*Bonus*/
+.bonus {
+    justify-content: center;
+}
+
+.bonus h2 {
+    color: aqua;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.bonus h4 {
+    color: rgb(209, 209, 209);
+    font-size: 14px;
+}
+
+.nb-list {
+    display: flex;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.nb-list p {
+    color: rgb(209, 209, 209);
+    font-size: 13px;
+    padding: 4px 8px;
+    padding-top: 15px;
+}
+
+.nb-list p i {
+    color: rgb(0, 196, 196);
+    padding-right: 8px;
+    font-size: 14px;
+}
+
+.nb {
+    display: flex;
+    gap: 15px;
+    padding: 20px 80px;
+        margin-top: 20px;
+        border-radius: 12px;
+        height: 200px;
+        background-color: rgb(1, 4, 34);
+        justify-content: space-between;
+}
+
+/*nb-projet*/
+.nb-projet {
+    background-image: url('../assets/images/rightabout.png');
+    background-size: cover;
+    background-position: center;
+    width: 220px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.nb-projet h2 {
+    color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.nb-projet p {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+}
+
+.btn-nb {
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 196, 196);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.tarifs-cards {
+    min-height: 330px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarifs-cards a {
+    margin-top: auto;
+    text-decoration: none;
+}
+
+.btn-tarifs {
+    width: 100%;
+    margin-left: 0;
+}
+
+.popular {
+    box-shadow: 0 0 24px rgba(0, 196, 196, 0.18);
+}
+
+@media (max-width: 820px) {
+    .tarifs-cont {
+        padding: 28px 5%;
+    }
+
+    .tarifs-cards {
+        width: min(100%, 320px);
+    }
+
+    .nb {
+        flex-direction: column;
+        height: auto;
+        padding: 28px 5%;
+    }
+
+    .nb-list {
+        flex-wrap: wrap;
+    }
+
+    .nb-projet {
+        width: 100%;
+        height: auto;
+        min-height: 160px;
+    }
+
+    .btn-nb {
+        margin-left: 0;
+    }
+}

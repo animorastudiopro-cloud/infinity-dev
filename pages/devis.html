@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Dev - Devis gratuit</title>
+    <link rel="stylesheet" href="../style/devis.css">
+    <link rel="stylesheet" href="../style/common.css">
+    <script src="https://kit.fontawesome.com/40a930d246.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav">
+        <div class="logo"><a href="../index.html"><img src="../assets/images/logo.png" alt="logo Infinity Dev"></a></div>
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html">Acheter</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="devis.html"><button class="btn-nav">Devis gratuit</button></a>
+    </header>
+
+    <main>
+        <section class="devis-hero">
+            <div>
+                <h1>Demander un devis gratuit</h1>
+                <p>Décrivez votre besoin et nous vous proposerons une solution adaptée à votre budget, vos délais et vos objectifs.</p>
+            </div>
+        </section>
+
+        <section class="devis-section">
+            <form method="post" action="#" class="devis-form">
+                <div class="form-grid">
+                    <div>
+                        <label for="name">Nom ou entreprise</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom/Entreprise">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email">
+                    </div>
+                    <div>
+                        <label for="phone">Téléphone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Votre numéro">
+                    </div>
+                    <div>
+                        <label for="service">Type de projet</label>
+                        <select id="service" name="service">
+                            <option value="">Choisir un service</option>
+                            <option>Création de site web</option>
+                            <option>Design publicitaire</option>
+                            <option>Installation Office</option>
+                            <option>Maintenance</option>
+                            <option>Autre demande</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="">Choisir une fourchette</option>
+                            <option>Moins de 50.000 FCFA</option>
+                            <option>50.000 - 150.000 FCFA</option>
+                            <option>150.000 - 500.000 FCFA</option>
+                            <option>Plus de 500.000 FCFA</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="deadline">Délai souhaité</label>
+                        <select id="deadline" name="deadline">
+                            <option value="">Choisir un délai</option>
+                            <option>Urgent</option>
+                            <option>1 à 2 semaines</option>
+                            <option>1 mois</option>
+                            <option>Flexible</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="description">Description du projet</label>
+                    <textarea id="description" name="description" placeholder="Expliquez votre projet, vos objectifs, vos attentes et les fonctionnalités souhaitées."></textarea>
+                </div>
+                <button class="devis-btn" type="submit">Envoyer la demande</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="social"><img src="../assets/images/logo.png" alt="logo Infinity Dev"><p>L'innovation au service de vos ambitions</p><div class="social-icon"><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="Threads"><i class="fa-brands fa-threads"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="menu-foot"><h3>Menu</h3><a href="../index.html">Accueil</a><a href="services.html">Services</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Acheter</a><a href="contact.html">Contact</a></div>
+            <div class="services-foot"><h3>Service</h3><p>Création de sites web</p><p>Installation Office</p><p>Affiches publicitaires</p><p>Maintenance</p><p>SEO</p></div>
+            <form method="post" action="#" class="form-devis"><h3>Devis gratuit</h3><div class="name"><label for="footer-name">Nom ou entreprise</label><input type="text" id="footer-name" name="name" placeholder="Votre nom/Entreprise"></div><div class="email"><label for="footer-email">Email</label><input type="email" id="footer-email" name="email" placeholder="Votre email"></div><div class="description"><label for="footer-description">Projet</label><textarea id="footer-description" name="description" placeholder="Décrivez votre projet ici..."></textarea></div><button class="form-btn" type="submit">Envoyer</button></form>
+        </div>
+    </footer>
+    <div class="licence"><p>© 2026 Infinity Dev | Tous droits réservés.</p><div class="licence-links"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+    <script src="../js/site.js"></script>
+    <script src="../js/tracking.js"></script>
+</body>
+</html>

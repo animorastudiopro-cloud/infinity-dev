@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Dev - Portfolio</title>
+    <link rel="stylesheet" href="../style/portfolio.css">
+    <link rel="stylesheet" href="../style/common.css">
+    <script src="https://kit.fontawesome.com/40a930d246.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav">
+        <div class="logo"><a href="../index.html"><img src="../assets/images/logo.png" alt="logo Infinity Dev"></a></div>
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html">Acheter</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="devis.html"><button class="btn-nav">Devis gratuit</button></a>
+    </header>
+
+    <main>
+        <section class="port-cont">
+            <div class="bio-card">
+                <h2>Biographie</h2>
+                <img src="../assets/images/bio-img.jpeg" alt="Kouamé Ange Richard">
+                <h4>Kouamé Ange Richard</h4>
+                <p>Fondateur</p>
+            </div>
+            <div class="port-info">
+                <div class="port-cards">
+                    <div class="list-cards">
+                        <h3>Développeur web</h3>
+                        <p>Création de sites web et d'applications modernes, pensés pour les besoins réels de chaque client.</p>
+                    </div>
+                    <div class="list-cards2">
+                        <h3>Graphiste designer</h3>
+                        <p>Création d'identités visuelles, d'affiches et de supports graphiques professionnels.</p>
+                    </div>
+                </div>
+                <div class="port-cards">
+                    <div class="list-cards3">
+                        <h3>Installation Windows</h3>
+                        <p>Installation, configuration et maintenance de systèmes Windows pour particuliers et professionnels.</p>
+                    </div>
+                    <div class="list-cards4">
+                        <h3>Activation Office</h3>
+                        <p>Installation et configuration de Microsoft Office avec accompagnement après service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="realisation-cont">
+            <h2>Nos réalisations</h2>
+            <div class="realisation-content">
+                <div class="realisation"><img src="../assets/images/rest-sit.jpg" alt="Site web restaurant"><h3>Site web restaurant</h3><a href="devis.html"><button class="btn-real">Commander</button></a></div>
+                <div class="realisation"><img src="../assets/images/ecommerce.jpg" alt="Boutique e-commerce"><h3>Boutique e-commerce</h3><a href="devis.html"><button class="btn-real">Commander</button></a></div>
+                <div class="realisation"><img src="../assets/images/affiche.jpg" alt="Affiche publicitaire"><h3>Affiche publicitaire</h3><a href="devis.html"><button class="btn-real">Commander</button></a></div>
+                <div class="realisation"><img src="../assets/images/vitrine.jpg" alt="Site vitrine"><h3>Site vitrine</h3><a href="devis.html"><button class="btn-real">Commander</button></a></div>
+                <div class="realisation"><img src="../assets/images/logo.jpg" alt="Logo et branding"><h3>Logo & branding</h3><a href="devis.html"><button class="btn-real">Commander</button></a></div>
+                <div class="realisation"><img src="../assets/images/banner.jpg" alt="Bannière publicitaire"><h3>Bannière publicitaire</h3><a href="devis.html"><button class="btn-real">Commander</button></a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="social">
+                <img src="../assets/images/logo.png" alt="logo Infinity Dev">
+                <p>L'innovation au service de vos ambitions</p>
+                <div class="social-icon">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="menu-foot">
+                <h3>Menu</h3>
+                <a href="../accueil.html">Accueil</a><a href="services.html">Services</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Acheter</a><a href="contact.html">Contact</a>
+            </div>
+            <div class="services-foot"><h3>Service</h3><p>Création de sites web</p><p>Installation Office</p><p>Affiches publicitaires</p><p>Maintenance</p><p>SEO</p></div>
+            <form method="post" action="#" class="form-devis">
+                <h3>Devis gratuit</h3>
+                <div class="name"><label for="footer-name">Nom ou entreprise</label><input type="text" id="footer-name" name="name" placeholder="Votre nom/Entreprise"></div>
+                <div class="email"><label for="footer-email">Email</label><input type="email" id="footer-email" name="email" placeholder="Votre email"></div>
+                <div class="description"><label for="footer-description">Projet</label><textarea id="footer-description" name="description" placeholder="Décrivez votre projet ici..."></textarea></div>
+                <button class="form-btn" type="submit">Envoyer</button>
+            </form>
+        </div>
+    </footer>
+    <div class="licence"><p>© 2026 Infinity Dev | Tous droits réservés.</p><div class="licence-links"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+    <script src="../js/site.js"></script>
+    <script src="../js/tracking.js"></script>
+</body>
+</html>

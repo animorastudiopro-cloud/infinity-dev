@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Dev - Contact</title>
+    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="stylesheet" href="../style/common.css">
+    <script src="https://kit.fontawesome.com/40a930d246.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav">
+        <div class="logo"><a href="../index.html"><img src="../assets/images/logo.png" alt="logo Infinity Dev"></a></div>
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html" class="active">Acheter</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="devis.html"><button class="btn-nav">Devis gratuit</button></a>
+    </header>
+
+    <main>
+        <section class="contact-head">
+            <h1><span>Contactez</span>-nous</h1>
+            <p>Une question, un projet ou une commande ? Envoyez-nous votre message.</p>
+        </section>
+        <section class="contact-section">
+            <form method="post" action="#" class="contact-form">
+                <div class="cta-name"><label for="name">Nom ou entreprise</label><input type="text" id="name" name="name" placeholder="Votre nom/Entreprise"></div>
+                <div class="cta-email"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="Votre email"></div>
+                <div class="cta-subject"><label for="subject">Service souhaité</label><input type="text" id="subject" name="subject" placeholder="Service souhaité" class="sujet"></div>
+                <div class="cta-description"><label for="description">Description</label><textarea id="description" name="description" placeholder="Décrivez votre projet ici..." class="description"></textarea></div>
+                <button class="cta-btn" type="submit">Envoyer</button>
+            </form>
+            <div class="contact-direct">
+                <a href="tel:+2250160749786"><i class="fa-solid fa-phone"></i>01 60 74 97 86</a>
+                <a href="mailto:infinitydev@gmail.com"><i class="fa-solid fa-envelope"></i>infinitydev@gmail.com</a>
+                <a href="https://wa.me/2250160749786" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="social"><img src="../assets/images/logo.png" alt="logo Infinity Dev"><p>L'innovation au service de vos ambitions</p><div class="social-icon"><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="Threads"><i class="fa-brands fa-threads"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="menu-foot"><h3>Menu</h3><a href="../index.html">Accueil</a><a href="services.html">Services</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Acheter</a><a href="contact.html">Contact</a></div>
+            <div class="services-foot"><h3>Service</h3><p>Création de sites web</p><p>Installation Office</p><p>Affiches publicitaires</p><p>Maintenance</p><p>SEO</p></div>
+            <form method="post" action="#" class="form-devis"><h3>Devis gratuit</h3><div class="name"><label for="footer-name">Nom ou entreprise</label><input type="text" id="footer-name" name="name" placeholder="Votre nom/Entreprise"></div><div class="email"><label for="footer-email">Email</label><input type="email" id="footer-email" name="email" placeholder="Votre email"></div><div class="description"><label for="footer-description">Projet</label><textarea id="footer-description" name="description" placeholder="Décrivez votre projet ici..."></textarea></div><button class="form-btn" type="submit">Envoyer</button></form>
+        </div>
+    </footer>
+    <div class="licence"><p>© 2026 Infinity Dev | Tous droits réservés.</p><div class="licence-links"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+    <script src="../js/site.js"></script>
+    <script src="../js/tracking.js"></script>
+</body>
+</html>
