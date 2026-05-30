@@ -7,6 +7,7 @@
     --white: #ffffff;
     --muted: #b8bec8;
     --soft: rgba(255, 255, 255, 0.08);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -23,6 +24,8 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f8fc;
     color: var(--dark);
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
 button,
@@ -32,8 +35,11 @@ a {
 
 button {
     cursor: pointer;
+    border: none;
+    background: none;
 }
 
+/* ========== NAVIGATION ========== */
 .nav {
     position: sticky;
     top: 0;
@@ -45,12 +51,14 @@ button {
     align-items: center;
     background-color: rgb(1, 4, 34);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(0px);
 }
 
 .logo img {
     height: 54px;
     width: 190px;
     object-fit: contain;
+    display: block;
 }
 
 .menu-toggle {
@@ -62,6 +70,12 @@ button {
     color: var(--white);
     background-color: transparent;
     font-size: 20px;
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
 }
 
 .nav-menu {
@@ -87,6 +101,7 @@ button {
     font-size: 14px;
     font-weight: 600;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -101,14 +116,21 @@ button {
     transition: width 0.4s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a[aria-current="page"]::after {
     width: calc(100% - 24px);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
     color: var(--cyan);
 }
 
+.btn-nav-link {
+    text-decoration: none;
+}
+
+/* ========== BOUTONS GÉNÉRIQUES ========== */
 .btn-nav,
 .btn1,
 .btn2,
@@ -118,7 +140,11 @@ button {
     border-radius: 8px;
     font-size: 14px;
     font-weight: 700;
-    transition: 0.3s ease;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .btn-nav {
@@ -131,8 +157,11 @@ button {
 
 .btn-nav:hover {
     background-color: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 217, 217, 0.3);
 }
 
+/* ========== HERO SECTION ========== */
 .hero {
     min-height: 560px;
     background-image: url(./assets/images/hero-bg.png);
@@ -140,6 +169,7 @@ button {
     background-position: center;
     text-align: left;
     background-attachment: fixed;
+    position: relative;
 }
 
 .hero-content {
@@ -191,6 +221,8 @@ button {
 
 .btn1:hover {
     background-color: #014779;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(1, 132, 228, 0.3);
 }
 
 .btn2 {
@@ -203,8 +235,10 @@ button {
 .btn2:hover {
     background-color: var(--white);
     color: var(--dark);
+    transform: translateY(-2px);
 }
 
+/* ========== STATS ========== */
 .stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(110px, 1fr));
@@ -216,6 +250,7 @@ button {
     color: var(--white);
     text-align: center;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .stats p {
@@ -232,7 +267,6 @@ button {
 
 .stats-cards {
     min-height: 108px;
-    width: 200px;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 14px 10px;
     display: flex;
@@ -240,7 +274,7 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .stats-cards:hover {
@@ -248,15 +282,33 @@ button {
     background-color: rgba(255, 255, 255, 0.18);
 }
 
+/* ========== SERVICES ========== */
 .services {
     padding: 70px 7%;
 }
 
 .services h2,
-.contact h2 {
+.contact h2,
+.testimonials h2 {
     text-transform: uppercase;
     color: rgb(2, 175, 175);
     margin-bottom: 28px;
+    font-size: clamp(24px, 4vw, 32px);
+    position: relative;
+    display: inline-block;
+}
+
+.services h2::after,
+.contact h2::after,
+.testimonials h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--cyan);
+    border-radius: 2px;
 }
 
 .service-container {
@@ -272,7 +324,7 @@ button {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .service-content:hover {
@@ -293,6 +345,7 @@ button {
     padding-bottom: 12px;
     font-size: 15px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .service-content p {
@@ -305,6 +358,7 @@ button {
 .service-content i {
     color: var(--cyan);
     padding-right: 12px;
+    width: 24px;
 }
 
 .service-content div:last-child {
@@ -317,12 +371,16 @@ button {
     color: var(--white);
     background-color: var(--blue);
     border: none;
+    width: 100%;
+    font-weight: 600;
 }
 
 .service-content button:hover {
     background-color: #014779;
+    transform: translateY(-2px);
 }
 
+/* ========== WHY US ========== */
 .why-us {
     padding: 0 7% 70px;
 }
@@ -345,23 +403,102 @@ button {
     color: var(--cyan);
     font-size: 28px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .nous-choisir p {
     color: var(--muted);
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .nous-choisir i {
     color: var(--cyan);
     padding-right: 12px;
+    width: 28px;
 }
 
+/* ========== TESTIMONIALS ========== */
+.testimonials {
+    padding: 70px 7%;
+    background: linear-gradient(135deg, #f5f8fc 0%, #e8eef4 100%);
+}
+
+.testimonials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.testimonials h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card .fa-quote-left {
+    color: var(--cyan);
+    font-size: 32px;
+    opacity: 0.3;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.testimonial-card p {
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 16px;
+}
+
+.testimonial-author strong {
+    color: var(--blue);
+    display: block;
+    font-size: 16px;
+}
+
+.testimonial-author span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ========== ABOUT ========== */
 .about {
     min-height: 380px;
     background-image: url(./assets/images/about-bg.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .about-content {
@@ -381,6 +518,7 @@ button {
     color: var(--cyan);
     font-size: 18px;
     padding-bottom: 8px;
+    letter-spacing: 2px;
 }
 
 .about-content h2 {
@@ -395,6 +533,7 @@ button {
     line-height: 1.7;
 }
 
+/* ========== CONTACT ========== */
 .contact {
     background-color: var(--navy);
     padding: 36px 7%;
@@ -419,6 +558,12 @@ button {
     padding: 18px;
     border-radius: 8px;
     background-color: var(--soft);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 .contact-container i {
@@ -430,8 +575,14 @@ button {
     text-decoration: none;
     color: var(--white);
     overflow-wrap: anywhere;
+    transition: var(--transition);
 }
 
+.contact-card a:hover {
+    color: var(--cyan);
+}
+
+/* ========== FOOTER ========== */
 .foot {
     display: grid;
     grid-template-columns: 1.3fr 0.8fr 0.9fr 1fr;
@@ -449,6 +600,7 @@ button {
 .social p {
     color: var(--muted);
     margin-top: 8px;
+    font-size: 14px;
 }
 
 .social-icon {
@@ -468,7 +620,7 @@ button {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.12);
     border-radius: 50%;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .social-icon a:hover {
@@ -489,6 +641,7 @@ button {
 .form-devis h3 {
     color: var(--white);
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .menu-foot a,
@@ -496,11 +649,13 @@ button {
     padding: 4px 0;
     color: var(--muted);
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: var(--transition);
+    font-size: 14px;
 }
 
 .menu-foot a:hover {
     color: var(--cyan);
+    transform: translateX(4px);
 }
 
 .form-devis {
@@ -514,18 +669,34 @@ button {
     color: var(--muted);
     font-size: 12px;
     margin-bottom: 4px;
+    font-weight: 500;
 }
 
+/* Style pour tous les champs du formulaire */
 .name,
 .email,
+.phone,
 .description {
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
 }
 
+/* Champ téléphone ajouté */
+.phone input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    outline: none;
+    background-color: #000535;
+    color: var(--white);
+    transition: var(--transition);
+}
+
 .name input,
 .email input,
+.phone input,
 .description textarea {
     width: 100%;
     padding: 10px 12px;
@@ -534,6 +705,15 @@ button {
     outline: none;
     background-color: #000535;
     color: var(--white);
+    transition: var(--transition);
+}
+
+.name input:focus,
+.email input:focus,
+.phone input:focus,
+.description textarea:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 2px rgba(0, 217, 217, 0.2);
 }
 
 .description textarea {
@@ -546,12 +726,23 @@ button {
     color: var(--white);
     background-color: var(--cyan);
     border: none;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .form-btn:hover {
     background-color: var(--blue);
+    transform: translateY(-2px);
 }
 
+.form-note {
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ========== LICENCE ========== */
 .licence {
     background-color: var(--dark);
     border-top: 1px solid rgba(255, 255, 255, 0.14);
@@ -559,11 +750,13 @@ button {
     justify-content: space-between;
     gap: 18px;
     padding: 16px 7%;
+    flex-wrap: wrap;
 }
 
 .licence p,
 .licence-links a {
     color: #8d95a3;
+    font-size: 13px;
 }
 
 .licence-links {
@@ -573,13 +766,14 @@ button {
 
 .licence-links a {
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .licence-links a:hover {
     color: var(--cyan);
 }
 
+/* ========== MEDIA QUERIES ========== */
 @media (max-width: 1100px) {
     .nav {
         padding: 12px 5%;
@@ -591,12 +785,14 @@ button {
     }
 
     .service-container,
-    .contact-container {
+    .contact-container,
+    .testimonials-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .foot {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
     }
 }
 
@@ -612,7 +808,7 @@ button {
         order: 2;
     }
 
-    .nav > a {
+    .nav>a:last-child {
         order: 3;
         margin-left: auto;
     }
@@ -638,16 +834,20 @@ button {
     .nav-links a {
         width: 100%;
         padding: 12px 0;
+        text-align: center;
     }
 
     .nav-links a::after {
-        left: 0;
+        left: 50%;
         right: auto;
+        transform: translateX(-50%);
         bottom: 6px;
+        width: 0;
     }
 
-    .nav-links a:hover::after {
-        width: 48px;
+    .nav-links a:hover::after,
+    .nav-links a[aria-current="page"]::after {
+        width: 60px;
     }
 
     .hero,
@@ -660,13 +860,6 @@ button {
         padding: 64px 5%;
     }
 
-    .stats,
-    .service-container,
-    .contact-container,
-    .foot {
-        grid-template-columns: 1fr;
-    }
-
     .stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -676,7 +869,8 @@ button {
     .about-content,
     .contact,
     .foot,
-    .licence {
+    .licence,
+    .testimonials {
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -689,20 +883,25 @@ button {
     .nous-choisir h3 {
         grid-row: auto;
         font-size: 24px;
+        text-align: center;
     }
 
     .licence {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
 @media (max-width: 520px) {
     .logo img {
         width: 150px;
+        height: auto;
     }
 
-    .nav > a {
+    .nav>a:last-child {
         width: 100%;
+        margin-left: 0;
     }
 
     .btn-nav {
@@ -723,6 +922,12 @@ button {
         grid-template-columns: 1fr;
     }
 
+    .service-container,
+    .contact-container,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
     .service-content {
         padding: 18px;
     }
@@ -731,8 +936,85 @@ button {
         align-items: flex-start;
     }
 
+    .foot {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
     .licence-links {
         flex-direction: column;
         gap: 8px;
+        align-items: center;
     }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+}
+
+/* ========== ACCESSIBILITÉ & PERFORMANCES ========== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus visible pour accessibilité */
+:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+}
+
+/* Sélection de texte */
+::selection {
+    background-color: var(--cyan);
+    color: var(--dark);
+}
+
+/* Notification toast pour les messages de formulaire */
+.notification-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideInRight 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation de chargement pour le bouton */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
 }
